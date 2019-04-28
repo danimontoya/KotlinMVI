@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/activity_vertical_margin"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:layout_marginEnd="@dimen/activity_vertical_margin"
+    android:clickable="true"
+    android:focusable="true"
+    android:transitionGroup="true"
+    app:cardCornerRadius="4dp">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/post_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableStart="@android:drawable/ic_menu_info_details"
+            android:drawablePadding="@dimen/posts_icon_padding"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="2dp"
+            android:maxLines="2"
+            android:paddingTop="@dimen/activity_horizontal_margin"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/posts_title_text_size"
+            android:transitionName="@string/transition_post_to_postdetail"
+            tools:text="Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1Row 1" />
+
+        <TextView
+            android:id="@+id/post_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end|center_vertical"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:textSize="@dimen/posts_author_text_size"
+            android:transitionName="@string/transition_post_to_postdetail"
+            tools:text="Juan" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</com.google.android.material.card.MaterialCardView>

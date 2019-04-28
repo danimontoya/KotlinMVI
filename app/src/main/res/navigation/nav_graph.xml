@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/postsFragment">
+
+    <fragment
+        android:id="@+id/postsFragment"
+        android:name="com.danieh.kotlinmvi.features.presentation.posts.PostsFragment"
+        android:label="@string/label_posts_fragment"
+        tools:layout="@layout/fragment_posts">
+
+        <action
+            android:id="@+id/action_postsFragment_to_postDetailsFragment"
+            app:destination="@+id/postDetailsFragment"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@+id/postsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/postDetailsFragment"
+        android:name="com.danieh.kotlinmvi.features.presentation.postdetails.PostDetailsFragment"
+        android:label="@string/label_post_details_fragment"
+        tools:layout="@layout/fragment_post_details">
+
+        <argument
+            android:name="postId"
+            android:defaultValue="0"
+            app:argType="integer" />
+
+        <argument
+            android:name="postTitle"
+            android:defaultValue="No-title"
+            app:argType="string" />
+
+        <argument
+            android:name="postBody"
+            android:defaultValue="No-body"
+            app:argType="string" />
+
+        <argument
+                android:name="postAuthor"
+                android:defaultValue="No-author"
+                app:argType="string" />
+
+    </fragment>
+
+</navigation>
